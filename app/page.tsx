@@ -85,14 +85,13 @@ export default function Home() {
             whileInView="animate"
             viewport={{ once: true, amount: 0.3 }}
           >
-            {[
-              {
+            {[{
                 icon: "fas fa-user-tie",
                 title: "For Gig Workers",
                 features: [
                   ["Fair Credit Access", "Use your real work data to get loan offers."],
                   ["One Profile, Many Platforms", "Combine your efforts into a single HustleScore."],
-                  ["You're in Control", "Choose the best bid, on your terms."],
+                  ["You&apos;re in Control", "Choose the best bid, on your terms."],
                 ],
               },
               {
@@ -112,7 +111,7 @@ export default function Home() {
                   ["Bid to Connect", "Compete to finance top-tier gig workers."],
                   ["Verified Hustle", "Transparent, trustworthy performance data."],
                 ],
-              },
+              }
             ].map((pillar, idx) => (
               <motion.div key={idx} className="pillar-card" variants={fadeInUp} {...cardHover}>
                 <i className={`icon ${pillar.icon}`}></i>
@@ -147,7 +146,7 @@ export default function Home() {
             whileInView="animate"
             viewport={{ once: true, amount: 0.3 }}
           >
-            {[
+            {[ 
               ["Connect Platforms", "Link your gig work accounts securely"],
               ["Get Your Score", "We compute your HustleScore instantly"],
               ["Request Loans", "Submit your credit requirements"],
@@ -195,7 +194,7 @@ export default function Home() {
               variants={fadeInUp}
               {...buttonVariants}
             >
-              I'm a Worker
+              I&apos;m a Worker
             </motion.button>
             <motion.button
               onClick={() => navigateTo('/platforms')}
@@ -204,7 +203,7 @@ export default function Home() {
               variants={fadeInUp}
               {...buttonVariants}
             >
-              I'm a Platform
+              I&apos;m a Platform
             </motion.button>
             <motion.button
               onClick={() => navigateTo('/agents')}
@@ -213,7 +212,7 @@ export default function Home() {
               variants={fadeInUp}
               {...buttonVariants}
             >
-              I'm an Agent
+              I&apos;m an Agent
             </motion.button>
           </motion.div>
         </div>
