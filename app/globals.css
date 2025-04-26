@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+:root {
+  /* Modern color palette based on #F02F34 and #E7D3BB */
+  --primary-color: #F02F34;    /* Vibrant red */
+  --primary-dark: #D41E23;     /* Darker red for hover */
+  --secondary-color: #E7D3BB;  /* Warm beige */
+  --secondary-dark: #D4BFA7;   /* Darker beige */
+  --accent-color: #2D2420;     /* Dark brown */
+  --text-color: #433A35;       /* Warm gray */
+  --text-light: #8C7B73;       /* Light warm gray */
+  --background-color: #FFFFFF;
+  --secondary-bg: #FAF6F3;     /* Light beige */
+  --card-bg: #FFFFFF;
+  --gradient-start: #F02F34;   /* Red */
+  --gradient-mid: #F24D51;     /* Lighter red */
+  --gradient-end: #E7D3BB;     /* Beige */
+  --success-color: #4A7B6A;    /* Muted green */
+  --error-color: #F02F34;      /* Red */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  background-color: var(--background-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+}
+
+.button-primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: white;
+  box-shadow: 0 4px 6px rgba(240, 47, 52, 0.2);
+}
+
+.button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(240, 47, 52, 0.3);
+}
+
+.button-secondary {
+  background: linear-gradient(135deg, var(--secondary-color), var(--secondary-dark));
+  color: var(--accent-color);
+  box-shadow: 0 4px 6px rgba(231, 211, 187, 0.3);
+}
+
+.button-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(231, 211, 187, 0.4);
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .section {
+    padding: 3rem 0;
+  }
+}

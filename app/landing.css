@@ -1,0 +1,233 @@
+.hero {
+  background: linear-gradient(135deg, var(--accent-color) 0%, #433A35 100%);
+  color: var(--background-color);
+  padding: 8rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(240, 47, 52, 0.1) 0%, transparent 50%);
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.1;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  color: var(--secondary-color);
+}
+
+.cta-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pillars {
+  background-color: var(--secondary-bg);
+  position: relative;
+}
+
+.pillars::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--secondary-dark), transparent);
+  opacity: 0.3;
+}
+
+.pillars-grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.pillar-card {
+  background: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(45, 36, 32, 0.04);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(231, 211, 187, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.pillar-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.pillar-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 25px -5px rgba(45, 36, 32, 0.1), 0 8px 10px -6px rgba(45, 36, 32, 0.1);
+  border-color: var(--secondary-color);
+}
+
+.pillar-card:hover::before {
+  opacity: 1;
+}
+
+.pillar-card h3 {
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.pillar-card .icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.pillar-card:hover .icon {
+  transform: scale(1.1);
+  color: var(--primary-dark);
+}
+
+.pillar-card h4 {
+  color: var(--accent-color);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+.pillar-card p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.how-it-works {
+  background-color: var(--background-color);
+}
+
+.how-it-works h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--accent-color);
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  counter-reset: step;
+}
+
+.step {
+  position: relative;
+  padding: 2rem;
+  background: var(--secondary-bg);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(231, 211, 187, 0.2);
+}
+
+.step::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0 4px 6px rgba(240, 47, 52, 0.2);
+}
+
+.step:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 20px 25px -5px rgba(45, 36, 32, 0.1), 0 8px 10px -6px rgba(45, 36, 32, 0.1);
+  border-color: var(--secondary-color);
+}
+
+.final-cta {
+  text-align: center;
+  background: linear-gradient(135deg, var(--accent-color), #433A35);
+  color: var(--background-color);
+  padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.final-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(240, 47, 52, 0.1) 0%, transparent 50%);
+}
+
+.final-cta h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: var(--secondary-color);
+  position: relative;
+}
+
+.final-cta .cta-group {
+  margin-top: 2rem;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+  }
+  
+  .cta-group {
+    flex-direction: column;
+  }
+  
+  .step::before {
+    position: static;
+    margin-bottom: 1rem;
+  }
+} 
